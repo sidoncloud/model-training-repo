@@ -18,5 +18,8 @@ steps:
 - name: 'gcr.io/cloud-builders/gsutil'
   args: ['cp', 'model-training-repo/bank_campaign_model_training.py', 'gs://us-central1-mlops-airflow-faa6f9bc-bucket/dags']
 
-  options:
+images:
+- 'gcr.io/udemy-mlops/bank-campaign-model'
+
+options:
   logging: CLOUD_LOGGING_ONLY
