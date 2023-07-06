@@ -57,6 +57,7 @@ def train_model(model_name, x_train, y_train):
         model = XGBClassifier(random_state=42, use_label_encoder=False)
     else:
         raise ValueError("Invalid model name.")
+
     pipeline = make_pipeline(model)
     pipeline.fit(x_train, y_train)
     return pipeline
